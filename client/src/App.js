@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Router >
         <Header />
-        <div className='h-screen' id='root'>
+        <div className='h-full' id='root'>
 
           <Routes>
             <Route path='/' element={<Home />} />
