@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../Images/logo.png"
 
@@ -6,7 +6,7 @@ const Header = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
 
   const location = useLocation();
-  if (location.pathname == "/login" || location.pathname == "/signup") {
+  if (location.pathname === "/login" || location.pathname === "/signup") {
     return null;
   }
   // const [isHidden, setIsHidden] = useState(false);
@@ -239,7 +239,15 @@ const Header = () => {
                   to="/accommodations"
                   className="font-normal block py-2 px-1 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-cyan-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
-                  Accommodation
+                  Accommodations
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/packages"
+                  className="font-normal block py-2 px-1 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-cyan-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  Packages
                 </Link>
               </li>
               <li>
@@ -305,7 +313,15 @@ const Header = () => {
                   to="/accommodations"
                   className="text-sky-700 dark:text-white hover:underline"
                 >
-                  Accommodation
+                  Accommodations
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/packages"
+                  className="text-sky-700 dark:text-white hover:underline"
+                >
+                  Packages
                 </Link>
               </li>
               <li>
